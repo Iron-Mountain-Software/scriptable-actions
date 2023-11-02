@@ -1,0 +1,14 @@
+{
+    "name": "com.iron-mountain.scriptable-actions",
+    "rootNamespace": "IronMountain.ScriptableActions",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

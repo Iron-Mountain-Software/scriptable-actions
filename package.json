@@ -1,0 +1,39 @@
+{
+  "name": "com.iron-mountain.scriptable-actions",
+  "version": "1.0.0",
+  "displayName": "Scriptable Actions",
+  "author": "Chris Monteferrante <ludachrismonte@gmail.com>",
+  "unity": "2019.1",
+  "type": "tool",
+  "license": "MIT",
+  "homepage": "https://github.com/Iron-Mountain-Software/scriptable-actions#readme",
+  "bugs": {
+    "type": "git",
+    "url": "https://github.com/Iron-Mountain-Software/scriptable-actions/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Iron-Mountain-Software/scriptable-actions.git"
+  },
+  "description": "",
+  "useCases": [],
+  "directions": null,
+  "keywords": [
+    "vfx"
+  ],
+  "sources": [
+    {
+      "type": "itch.io",
+      "url": "https://iron-mountain.itch.io/scriptable-actions"
+    },
+    {
+      "type": "npm",
+      "url": "https://www.npmjs.com/package/com.iron-mountain.scriptable-actions"
+    },
+    {
+      "type": "git",
+      "url": "https://github.com/Iron-Mountain-Software/scriptable-actions"
+    }
+  ],
+  "dependencies": {}
+}
