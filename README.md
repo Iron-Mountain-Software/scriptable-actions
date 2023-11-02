@@ -1,5 +1,5 @@
 # Scriptable Actions
-*Version: 1.0.0*
+*Version: 1.0.2*
 ## Description: 
 A framework for creating, inspecting, and invoking custom actions through scriptable objects.
 ## Package Mirrors: 
