@@ -90,20 +90,9 @@ namespace IronMountain.ScriptableActions.Editor
         
         public void Draw()
         {
-            RefreshActionsList();
             RefreshHeaders();
             DrawMainHeader();
             DrawContent();
-        }
-        
-        private void RefreshActionsList()
-        {
-            string parentObjectPath = AssetDatabase.GetAssetPath(_parent);
-            Object[] subAssets = AssetDatabase.LoadAllAssetsAtPath(parentObjectPath);
-            foreach (var asset in subAssets)
-            {
-                if (asset is ScriptableAction action && !_actions.Contains(asset)) _actions.Add(action);
-            }
         }
         
         private void RefreshHeaders()
@@ -119,6 +108,7 @@ namespace IronMountain.ScriptableActions.Editor
         
         private void DrawMainHeader()
         {
+            GUILayout.Space(10);
             EditorGUILayout.BeginHorizontal(Header,GUILayout.ExpandWidth(true));
             GUILayout.Label(_name, H1, GUILayout.ExpandWidth(true));
             if (GUILayout.Button("Add New", GUILayout.MaxWidth(60))) AddScriptableActionMenu.Open(_parent, _actions);

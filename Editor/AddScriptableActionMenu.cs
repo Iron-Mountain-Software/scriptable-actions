@@ -13,6 +13,8 @@ namespace IronMountain.ScriptableActions.Editor
             
             foreach (Type scriptableActionType in ScriptableActionsEditor.ScriptableActionTypes)
             {
+                if (scriptableActionType == null || scriptableActionType.IsAbstract) continue;
+                
                 menu.AddItem(new GUIContent("Add " + scriptableActionType.Name), false,
                     () =>
                     {

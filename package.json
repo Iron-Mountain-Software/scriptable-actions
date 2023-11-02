@@ -15,7 +15,7 @@
     "type": "git",
     "url": "git+https://github.com/Iron-Mountain-Software/scriptable-actions.git"
   },
-  "description": "",
+  "description": "A framework for creating, inspecting, and invoking custom actions through scriptable objects.",
   "useCases": [],
   "directions": null,
   "keywords": [
