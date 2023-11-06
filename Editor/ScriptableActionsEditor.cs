@@ -96,7 +96,7 @@ namespace IronMountain.ScriptableActions.Editor
             GUILayout.Space(10);
             EditorGUILayout.BeginHorizontal(_header,GUILayout.ExpandWidth(true));
             GUILayout.Label(_name, _h1, GUILayout.ExpandWidth(true));
-            if (GUILayout.Button("Add New", GUILayout.MaxWidth(60))) AddScriptableActionMenu.Open(_parent, _actions);
+            if (GUILayout.Button("Add Action", GUILayout.MaxWidth(125))) AddScriptableActionMenu.Open(_parent, _actions);
             EditorGUILayout.EndHorizontal();
         }
 

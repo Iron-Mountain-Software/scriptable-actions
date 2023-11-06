@@ -14,7 +14,7 @@ namespace IronMountain.ScriptableActions.Editor
         {
             ScriptableActionTypes = AppDomain.CurrentDomain.GetAssemblies()
                 .SelectMany(assembly => assembly.GetTypes())
-                .Where(type => type.IsSubclassOf(typeof(ScriptableAction)))
+                .Where(type => type.IsSubclassOf(typeof(ScriptableAction)) && !type.IsAbstract)
                 .ToList();
         }
         
