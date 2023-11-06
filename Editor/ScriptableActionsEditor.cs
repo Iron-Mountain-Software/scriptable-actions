@@ -9,18 +9,7 @@ namespace IronMountain.ScriptableActions.Editor
 {
     public class ScriptableActionsEditor
     {
-        public static readonly List<Type> ScriptableActionTypes;
-        private static readonly Dictionary<string, bool> CollapsedDrawers;
-
-        static ScriptableActionsEditor()
-        {
-            ScriptableActionTypes = AppDomain.CurrentDomain.GetAssemblies()
-                .SelectMany(assembly => assembly.GetTypes())
-                .Where(type => type.IsSubclassOf(typeof(ScriptableAction)))
-                .ToList();
-            CollapsedDrawers = new Dictionary<string, bool>();
-            
-        }
+        private static readonly Dictionary<string, bool> CollapsedDrawers = new ();
 
         private readonly string _name;
         private readonly ScriptableObject _parent;
@@ -186,19 +175,19 @@ namespace IronMountain.ScriptableActions.Editor
                     if (!_cache.ContainsKey(action)) _cache.Add(action, cachedEditor);
                     else _cache[action] = cachedEditor;
 
-                    if (GUILayout.Button("Invoke", GUILayout.MaxWidth(60), GUILayout.ExpandHeight(true)))
+                    if (GUILayout.Button("Invoke", GUILayout.MaxWidth(60)))
                     {
                         action.Invoke();
                         return;
                     }
                 
-                    if (GUILayout.Button(EditorGUIUtility.IconContent("Animation.FilterBySelection"), GUILayout.MaxWidth(25), GUILayout.ExpandHeight(true)))
+                    if (GUILayout.Button(EditorGUIUtility.IconContent("Animation.FilterBySelection"), GUILayout.MaxWidth(25)))
                     {
                         Selection.activeObject = action;
                         return;
                     }
                 
-                    if (GUILayout.Button(EditorGUIUtility.IconContent("TreeEditor.Trash"), GUILayout.MaxWidth(25), GUILayout.ExpandHeight(true)))
+                    if (GUILayout.Button(EditorGUIUtility.IconContent("TreeEditor.Trash"), GUILayout.MaxWidth(25)))
                     {
                         _actions.Remove(action);
                         AssetDatabase.RemoveObjectFromAsset(action);

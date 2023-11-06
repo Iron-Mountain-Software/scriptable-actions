@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
@@ -7,11 +8,21 @@ namespace IronMountain.ScriptableActions.Editor
 {
     public static class AddScriptableActionMenu
     {
+        public static readonly List<Type> ScriptableActionTypes;
+
+        static AddScriptableActionMenu()
+        {
+            ScriptableActionTypes = AppDomain.CurrentDomain.GetAssemblies()
+                .SelectMany(assembly => assembly.GetTypes())
+                .Where(type => type.IsSubclassOf(typeof(ScriptableAction)))
+                .ToList();
+        }
+        
         public static void Open(ScriptableObject parent, List<ScriptableAction> list)
         {
             GenericMenu menu = new GenericMenu();
             
-            foreach (Type scriptableActionType in ScriptableActionsEditor.ScriptableActionTypes)
+            foreach (Type scriptableActionType in ScriptableActionTypes)
             {
                 if (scriptableActionType == null || scriptableActionType.IsAbstract) continue;
                 
