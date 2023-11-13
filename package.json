@@ -1,6 +1,6 @@
 {
   "name": "com.iron-mountain.scriptable-actions",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "displayName": "Scriptable Actions",
   "author": "Chris Monteferrante <ludachrismonte@gmail.com>",
   "unity": "2019.1",
@@ -15,7 +15,7 @@
     "type": "git",
     "url": "git+https://github.com/Iron-Mountain-Software/scriptable-actions.git"
   },
-  "description": "A framework for creating, inspecting, and invoking custom actions through scriptable objects.",
+  "description": "Scriptable object actions that can be stored and invoked.",
   "useCases": [],
   "directions": null,
   "keywords": [
@@ -34,5 +34,6 @@
       "type": "git",
       "url": "https://github.com/Iron-Mountain-Software/scriptable-actions"
     }
-  ]
+  ],
+  "dependencies": {}
 }
