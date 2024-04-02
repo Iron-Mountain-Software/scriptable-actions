@@ -183,7 +183,7 @@ namespace IronMountain.ScriptableActions.Editor
                 
                     if (GUILayout.Button(EditorGUIUtility.IconContent("Animation.FilterBySelection"), GUILayout.MaxWidth(25)))
                     {
-                        Selection.activeObject = action;
+                        EditorGUIUtility.PingObject(action);
                         return;
                     }
                 

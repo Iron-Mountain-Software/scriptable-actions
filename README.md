@@ -1,5 +1,5 @@
 # Scriptable Actions
-*Version: 1.0.5*
+*Version: 1.0.6*
 ## Description: 
 Scriptable object actions that can be stored and invoked.
 ## Package Mirrors: 
